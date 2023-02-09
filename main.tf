@@ -1,7 +1,10 @@
 provider "aws" {
   region = "ca-central-1"
 }
-
+provider "aws" {
+  alias  = "aws-sa-east-1"
+  region = "sa-east-1"
+}
 terraform {
   backend "s3" {
     bucket = "descomplicando-terraform-nidio-tfstates"
